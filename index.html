@@ -4,44 +4,21 @@
     <meta charset="urf-8" />
     <title>Tariq Shihadah</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
     <div class="container">
         
         <!--NAVIGATION BAR-->
-        <div class="nav-wrapper">
+        <div id="nav-placeholder">
 
-            <div class="nav-left">
-
-                <div class="nav-button">
-                    <div class="nav-link-wrapper">
-                        <a href="index.html">Portfolio</a>
-                    </div>
-                </div>
-
-                <div class="nav-button">
-                    <div class="nav-link-wrapper">
-                        <a href="music.html">Music</a>
-                    </div>
-                </div>
-    
-                <div class="nav-button">
-                    <div class="nav-link-wrapper">
-                        <a href="about.html">About</a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="nav-right">
-                <div class="nav-button">
-                    <div class="nav-link-wrapper">
-                        <a href="index.html">Tariq Shihadah</a>
-                    </div>
-                </div>
-            </div>
-        </div>    
+        </div>
+        <script>
+        $(function(){
+            $("#nav-placeholder").load("nav.html");
+        });
+        </script>
         
         <!--PAGE CONTENT-->
         <div class="content-wrapper">
@@ -165,17 +142,14 @@
         </div>
 
         <!--FOOTER-->
-        <div class="footer-wrapper">
-            <div class="footer-link-wrapper">
-                <a href="index.html">Home</a>
-            </div>
-            <div class="footer-link-wrapper">
-                <a href="about.html">About</a>
-            </div>
-            <div class="footer-link-wrapper">
-                <a href="mailto:tariq.shihadah@gmail.com">Contact</a>
-            </div>
+        <div id="nav-placeholder">
+
         </div>
+        <script>
+        $(function(){
+            $("#nav-placeholder").load("nav.html");
+        });
+        </script>
 
     </div>
 </body>
