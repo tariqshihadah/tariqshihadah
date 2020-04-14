@@ -46,6 +46,9 @@ p {
 /* Navigation Bar Styles */
 
 .nav-wrapper {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: var(--main-bg-color);
@@ -53,7 +56,7 @@ p {
 }
 
 .nav-background {
-    height: 48px;
+    height: 60px;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -76,11 +79,13 @@ p {
 .nav-link-wrapper {
     padding-top: 18px;
     padding-bottom: 18px;
-    padding-left: 24px;
-    padding-right: 24px;
 }
 
 .nav-link-wrapper a {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
     color: #d8d8d8;
     text-decoration: none;
     text-shadow: 0.5px 0.5px 3px black;
@@ -108,6 +113,14 @@ p {
 .nav-button:hover .nav-link-wrapper > a {
     color: var(--main-bg-color);
     text-shadow: 0.5px 0.5px 3px rgb(255, 255, 255);
+}
+
+
+/* Content Styles */
+
+.content-wrapper {
+    z-index: 1;
+    padding-top: 60px;
 }
 
 
@@ -185,7 +198,7 @@ p {
     margin-left: 10%;
     margin-right: 10%;
     opacity: 0.0;
-    transition: opacity 0.5s;
+    transition: opacity 1.2s;
 }
 
 .grid-item-wrapper:hover .grid-item-background {
@@ -241,13 +254,26 @@ p {
     background-repeat: no-repeat;
 }
 
+.solid-line {
+    border-bottom: 1px solid var(--main-text-color);
+}
+
+.spacer {
+    font-size: 0;
+    height: 10px;
+    width: 100%;
+    line-height: 0px;
+}
+
 
 /* Block Styles */
 
 .block-wrapper {
     align-items: center;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    max-width: 800px;
 }
 
 .player-wrapper {
@@ -270,6 +296,7 @@ p {
 
 .round-button {
     width: 60%;
+    min-width: 250px;
     margin: auto;
     text-align: center;
     background-color: rgb(80, 80, 80);
@@ -308,6 +335,33 @@ p {
     text-shadow: 0.5px 0.5px 3px rgb(255, 255, 255);
 }
 
+
+/* Social Media Icons */
+
+.fa {
+    padding: 20px;
+    font-size: 20px;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+  
+.fa:hover {
+    opacity: 0.7;
+}
+  
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+  
+.fa-twitter {
+    background: white;
+    color: transparent;
+}
+  
 
 /* Mobile Version Overrides */
 
