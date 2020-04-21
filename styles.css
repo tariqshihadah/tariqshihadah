@@ -87,8 +87,7 @@ p {
     color: #d8d8d8;
     text-decoration: none;
     text-shadow: 0.5px 0.5px 3px black;
-    transition: color 0.5s;
-    transition: text-shadow 0.5s;
+    transition: color 0.5s, text-shadow 0.5s;
 }
 
 .nav-face:hover {
@@ -161,8 +160,7 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     opacity: 1.0;
-    transition: opacity 0.5s;
-    transition: transform 1.0s;
+    transition: opacity 0.8s, transform 0.8s;
 }
 
 .grid-item-description-wrapper {
@@ -313,8 +311,7 @@ p {
     color: #d8d8d8;
     text-decoration: none;
     text-shadow: 0.5px 0.5px 3px black;
-    transition: color 0.5s;
-    transition: text-shadow 0.5s;
+    transition: color 0.5s, text-shadow 0.5s;
 }
 
 .button-face:hover {
