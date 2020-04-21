@@ -48,6 +48,7 @@ p {
 .nav-wrapper {
     position: fixed;
     z-index: 999;
+    height: 60px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -63,11 +64,17 @@ p {
     text-decoration: none;
 }
 
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav-face {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
+    height: 100%;
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 3px;
@@ -86,7 +93,7 @@ p {
     margin: auto;
     color: #d8d8d8;
     text-decoration: none;
-    text-shadow: 0.5px 0.5px 3px black;
+    text-shadow: 1px 1px 3px black;
     transition: color 0.5s, text-shadow 0.5s;
 }
 
@@ -96,7 +103,17 @@ p {
 
 .nav-face:hover .nav-link {
     color: var(--main-bg-color);
-    text-shadow: 0.5px 0.5px 3px rgb(255, 255, 255);
+    text-shadow: 1px 1px 3px rgb(255, 255, 255);
+}
+
+.nav-item img {
+    height: 60%;
+    max-width: 200px;
+    opacity: 0.9;
+    padding-right: 10px;
+    margin: auto;
+    -webkit-filter: drop-shadow(1px 1px 3px black);
+    filter:         drop-shadow(1px 1px 3px black); 
 }
 
 
@@ -131,7 +148,7 @@ p {
     text-transform: uppercase;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
-    text-shadow: 0.5px 0.5px 3px black;
+    text-shadow: 1px 1px 3px black;
     transition: text-shadow 0.25s;
 }
 
@@ -310,7 +327,7 @@ p {
     margin: auto;
     color: #d8d8d8;
     text-decoration: none;
-    text-shadow: 0.5px 0.5px 3px black;
+    text-shadow: 1px 1px 3px black;
     transition: color 0.5s, text-shadow 0.5s;
 }
 
@@ -320,7 +337,7 @@ p {
 
 .button-face:hover .button-link {
     color: var(--main-bg-color);
-    text-shadow: 0.5px 0.5px 3px rgb(255, 255, 255);
+    text-shadow: 1px 1px 3px rgb(255, 255, 255);
 }
 
 
@@ -368,6 +385,10 @@ p {
 
 
     /* Navigation Bar Styles */
+
+    .nav-wrapper {
+        height: 100px;
+    }
 
     .nav-button {
         font-size: 18px;
