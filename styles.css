@@ -2,7 +2,12 @@
 
 :root {
     --main-bg-color: rgb(44, 44, 44);
-    --main-text-color: rgb(255, 255, 255);
+    --main-text-color: rgba(255, 255, 255, 0.9);
+    --main-hint1-color: #f1f1f1;
+    --main-hint2-color: #ddd;
+    --main-trans-time: 0.3s;
+
+    --main-nav-height: 60px;
 }
 
 
@@ -11,7 +16,7 @@
 body {
     margin: 0px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--main-text-color);
     background-color: var(--main-bg-color);
@@ -22,98 +27,165 @@ h1 {
     font-size: 64px;
     font-weight: 300;
     font-style: regular;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     color: var(--main-text-color);
+    text-shadow: 1px 1px 10px black;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    font-style: regular;
+    letter-spacing: 2px;
+    color: var(--main-text-color);
+    text-shadow: 1px 1px 10px black;
+    text-align: center;
 }
 
 h3 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-size: 32px;
+    font-weight: 500;
+    font-style: regular;
+    letter-spacing: 1px;
+    color: var(--main-text-color);
+    text-shadow: 1px 1px 10px black;
+    text-align: center;
+}
+
+h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
     font-weight: 300;
     font-style: italic;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     color: var(--main-text-color);
+    text-shadow: 1px 1px 10px black;
+    text-align: center;
 }
 
 p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
+    text-align: justify;
+    text-justify: inter-word;
     color: var(--main-text-color);
+    text-shadow: 1px 1px 10px black;
+    margin-bottom: 1.2em;
 }
+
 
 
 /* Navigation Bar Styles */
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .fa {
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--main-hint1-color);
+    min-width: 180px;
+    opacity: 0.9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    color: var(--main-bg-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--main-hint2-color);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.darklight-trans {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    text-shadow: 1px 1px 3px black;
+    transition: background-color var(--main-trans-time), color var(--main-trans-time), text-shadow var(--main-trans-time);
+}
+
+.darklight-trans:hover, .dropdown:hover .darklight-trans {
+    background-color: var(--main-text-color);
+    color: var(--main-bg-color);
+    text-shadow: 0 0 0 black;
+    transition: background-color var(--main-trans-time), color var(--main-trans-time);
+}
+
 .nav-wrapper {
     position: fixed;
     z-index: 999;
-    height: 60px;
+    height: var(--main-nav-height);
     width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: var(--main-bg-color);
-    padding: 0px;
+}
+
+.nav-style {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-wrapper a {
+    text-decoration: none;
 }
 
 .nav-group {
     display: flex;
 }
 
-.nav-group a {
-    text-decoration: none;
-}
-
 .nav-item {
+    height: var(--main-nav-height);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.nav-face {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    user-select: none;
-    background-color: rgb(44, 44, 44);
-    transition: background-color 0.5s;
-}
-
-.nav-link {
-    padding-top: 18px;
-    padding-bottom: 18px;
-    padding-left: 24px;
-    padding-right: 24px;
-    margin: auto;
-    color: #d8d8d8;
-    text-decoration: none;
-    text-shadow: 1px 1px 3px black;
-    transition: color 0.5s, text-shadow 0.5s;
-}
-
-.nav-face:hover {
-    background-color: var(--main-text-color);
-}
-
-.nav-face:hover .nav-link {
-    color: var(--main-bg-color);
-    text-shadow: 1px 1px 3px rgb(255, 255, 255);
 }
 
 .nav-item img {
     height: 60%;
     max-width: 200px;
     opacity: 0.9;
-    padding-right: 10px;
+    padding-right: 20px;
     margin: auto;
     -webkit-filter: drop-shadow(1px 1px 3px black);
-    filter:         drop-shadow(1px 1px 3px black); 
+    filter:         drop-shadow(1px 1px 3px black);
+    transition: opacity var(--main-trans-time);
+}
+
+.nav-item img:hover {
+    opacity: 0.6;
+}
+
+.nav-text {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    user-select: none;
 }
 
 
@@ -143,17 +215,18 @@ p {
 .footer-link-wrapper a {
     color: var(--main-text-color);
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 3px;
     text-transform: uppercase;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
-    text-shadow: 1px 1px 3px black;
-    transition: text-shadow 0.25s;
+    text-shadow: 2px 2px 10px black;
+    opacity: 1.0;
+    transition: opacity 0.3s;
 }
 
 .footer-link-wrapper a:hover {
-    text-shadow: 3px 3px 4px black;
+    opacity: 0.6;
 }
 
 
@@ -229,7 +302,7 @@ p {
     height: 100%;
     width: 100%;
     opacity: 1.0;
-    transition: opacity 0.5s;
+    transition: opacity var(--main-trans-time);
 }
 
 .grid-item-suptext {
@@ -316,7 +389,7 @@ p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     user-select: none;
     background-color: rgb(80, 80, 80);
-    transition: background-color 0.5s;
+    transition: background-color var(--main-trans-time);
 }
 
 .button-link {
@@ -328,7 +401,7 @@ p {
     color: #d8d8d8;
     text-decoration: none;
     text-shadow: 1px 1px 3px black;
-    transition: color 0.5s, text-shadow 0.5s;
+    transition: color var(--main-trans-time), text-shadow var(--main-trans-time);
 }
 
 .button-face:hover {
@@ -420,8 +493,10 @@ p {
 
     /* Block Styles */
     .block-wrapper {
-        margin-left: 5%;
-        margin-right: 5%;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
     }
     
     
