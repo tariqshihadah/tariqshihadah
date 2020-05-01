@@ -2,6 +2,7 @@
 
 :root {
     --main-bg-color: rgb(44, 44, 44);
+    --main-bg2-color: rgb(66, 66, 66);
     --main-text-color: rgba(255, 255, 255, 0.9);
     --main-hint1-color: #f1f1f1;
     --main-hint2-color: #ddd;
@@ -146,6 +147,11 @@ ul {
     display: flex;
     justify-content: space-between;
     background-color: var(--main-bg-color);
+}
+
+.nav-head-mobile {
+    display: none;
+    width: 100%;
 }
 
 .nav-style {
@@ -468,19 +474,53 @@ ul {
     /* Navigation Bar Styles */
 
     .nav-wrapper {
-        height: 100px;
+        display: block;
+        position: absolute;
     }
 
-    .nav-button {
-        font-size: 18px;
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+        opacity: 1.0;
+        box-shadow: none;
+    }
+
+    .nav-head-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
     }
 
     .nav-logo {
-        font-size: 18px;
+        display: none;
+    }
+
+    .nav-group {
+        display: none;
+    }
+
+    .nav-wrapper:hover .nav-main {
+        display: block;
+        position: absolute;
+        font-size: 100;
+        width: 100%;
+    }
+
+    .nav-item, .nav-text {
+        width: 100%;
+        background-color: var(--main-bg2-color);
+    }
+
+
+    .nav-style {
+        font-size: 16px;
+        letter-spacing: 1px;
     }
 
     .footer-link-wrapper a {
-        font-size: 18px;
+        font-size: 16px;
     }
 
 
